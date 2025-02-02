@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My mondorian project</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            height: 100vh;
+            align-items: center;
+        }
+        .container{
+            background-color: black;
+            display: grid;
+            height: 875px;
+            width: 550px;
+            gap: 10px;
+            grid-template-columns: repeat(16, 1fr);
+            grid-template-rows: repeat(16, 1fr);
+        }
+        .box{
+            background-color: linen;
+        }
+        .ye{
+            background-color: #f5c000;
+        }
+        .one{
+            
+            grid-row: span 4;
+        }
+        
+        .three{
+            
+            grid-column: span 4;
+        }
+        .four{
+            
+            grid-column: span 8;
+        }
+        .five{
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .six{
+            grid-area: 2/2/5/4;
+        }
+        .seven{
+            grid-area: 2/4/4/7;
+        }
+        .eight{
+            grid-column: span 3;
+        }
+        .nine{
+            grid-area: 2/10/5/12;
+        }
+        .ten{
+            grid-column: span 2;
+        }
+        .eleven{
+            grid-area: 3/7/5/10;
+        }
+        .twelve{
+            grid-area: 3/12/6/14;
+        }
+        .thirteen{
+            grid-area:3/14/6/16;
+        }
+        .fourteen{
+            grid-area: 3/ 16/8/17;
+        }
+        .fifteen{
+            grid-area: 4/4/6/6;
+        }
+        .sixteen{
+            grid-area: 5/1/7/3;
+        }
+        .seventeen{
+            grid-row: 5/7;
+        }
+        .eighteen{
+            grid-area: 5/6/7/8;
+        }
+        .nineteen{
+            grid-area: 5/8/7/11;
+        }
+        .twentyone{
+            grid-area: 6/4/7/6;
+        }
+        .twentytwo{
+            grid-area: 6/11/7/13;
+        }
+        .twentythree{
+           grid-area: 6/13/8/16;
+        }
+        .twentyfour{
+            grid-row: 7/14;
+        }
+        .twentyfive{
+            grid-area: 7/2/9/7;
+        }
+        .twentysix{
+            grid-area: 7/7/11/9;
+        }
+        .twentyseven{
+            grid-area: 7/9/10/11;
+        }
+        .twentyeight{
+            grid-area: 7/11/8/13;
+        }
+        .twentynine{
+            grid-area: 8/11/10/14;
+        }
+        .thirty{
+            grid-area: 8/14/10/16;
+        }
+        .thirtyone{
+            grid-area: 8/16/10/17;
+        }
+        .thirtytwo{
+            grid-area: 9/2/13/3;
+        }
+        .thirtyfour{
+            grid-area: 9/3/11/5;
+        }
+        .thirtyfive{
+            grid-area: 9/5/11/7;
+        }
+        .thirtysix{
+            grid-area: 10/9/11/11;
+        }
+        .thirtyseven{
+            grid-area: 10/11/12/14;
+        }
+        .thirtyeight{
+            grid-area: 10/14/12/15;
+        }
+        .thirtynine{
+            grid-area: 10/15/13/17;
+        }
+        .forty{
+            grid-area: 11/3/13/5;
+        }
+        .fortyone{
+            grid-area: 11/5/13/8;
+        }
+        .fortytwo{
+            grid-area: 11/8/12/11;
+        }
+        .fortythree {
+             grid-area: 12/8/16/10;
+        }
+        .fortyfour {
+             grid-area: 12/10/14/12;
+        }
+        .fortyfive {
+              grid-area: 12/12/13/15;
+        }
+        .fortysix {
+              grid-area: 13/2/14/4;
+        }
+        .fortynine {
+           grid-area: 13/6/15/8;
+        }
+        .fifty {
+            grid-area: 13/12/15/13;
+        }
+        .fiftyone {
+            grid-area: 13/13/15/15;
+        }
+        .fiftytwo {
+            grid-area: 13/15/15/16;
+        }
+        .fiftythree {
+            grid-area: 13/16/15/17;
+        }
+        .fiftyfour {
+            grid-area: 14/1/16/4;
+        }
+        .fiftyfive {
+            grid-area: 14/4/15/6;
+        }
+        .fiftysix {
+            grid-area: 14/10/15/12;
+        }
+        .fiftyseven {
+           grid-area: 15/4/17/6;
+        }
+        .fiftyeight {
+            grid-area: 15/6/16/8;
+        }
+        .fiftynine {
+            grid-area: 15/10/16/15;
+        }
+        .sixty {
+            grid-area: 15/15/16/17;
+        }
+        .sixtytwo {
+            grid-area: 16/2/17/4;
+        }
+        .sixtythree {
+            grid-area: 16/6/17/10;
+        }
+        .sixtyfour {
+            grid-area: 16/10/17/12;
+        }
+        .sixtyfive {
+            grid-area: 16/12/17/15;
+        }
+        .sixtysix {
+            grid-area: 16/15/17/17;
+         }
+    
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box one ye"></div>
+    <div class="box two ye"></div>
+    <div class="box three ye"></div>
+    <div class="box four"></div>
+    <div class="box five ye"></div>
+    <div class="box six"></div>
+    <div class="box seven"></div>
+    <div class="box eight"></div>
+    <div class="box nine ye"></div>
+    <div class="box ten"></div>
+    <div class="box eleven"></div>
+    <div class="box twelve ye"></div>
+    <div class="box thirteen"></div>
+    <div class="box fourteen"></div>
+    <div class="box fifteen ye"></div>
+    <div class="box sixteen"></div>
+    <div class="box seventeen"></div>
+    <div class="box eighteen"></div>
+    <div class="box nineteen"></div>
+    <div class="box twenty"></div>
+    <div class="box twentyone"></div>
+    <div class="box twentytwo"></div>
+    <div class="box twentythree"></div>
+    <div class="box twentyfour"></div>
+    <div class="box twentyfive"></div>
+    <div class="box twentysix ye"></div>
+    <div class="box twentyseven ye"></div>
+    <div class="box twentyeight ye"></div>
+    <div class="box twentynine"></div>
+    <div class="box thirty ye"></div>
+    <div class="box thirtyone"></div>
+    <div class="box thirtytwo ye"></div>
+    <div class="box thirtythree ye"></div>
+    <div class="box thirtyfour ye"></div>
+    <div class="box thirtyfive"></div>
+    <div class="box thirtysix"></div>
+    <div class="box thirtyseven"></div>
+    <div class="box thirtyeight ye"></div>
+    <div class="box thirtynine"></div>
+    <div class="box forty"></div>
+    <div class="box fortyone ye"></div>
+    <div class="box fortytwo ye"></div>
+    <div class="box fortythree ye"></div>
+    <div class="box fortyfour"></div>
+    <div class="box fortyfive"></div>
+    <div class="box fortysix"></div>
+    <div class="box fortyseven ye"></div>
+    <div class="box fortyeight"></div>
+    <div class="box fortynine"></div>
+    <div class="box fifty"></div>
+    <div class="box fiftyone"></div>
+    <div class="box fiftytwo"></div>
+    <div class="box fiftythree"></div>
+    <div class="box fiftyfour"></div>
+    <div class="box fiftyfive"></div>
+    <div class="box fiftysix ye"></div>
+    <div class="box fiftyseven ye"></div>
+    <div class="box fiftyeight"></div>
+    <div class="box fiftynine"></div>
+    <div class="box sixty"></div>
+    <div class="box sixtyone"></div>
+    <div class="box sixtytwo"></div>
+    <div class="box sixtythree"></div>
+    <div class="box sixtyfour"></div>
+    <div class="box sixtyfive ye"></div>
+    <div class="box sixtysix"></div>
+    <div class="box sixtyseven"></div>
+</div>
+</body>
+</html>
